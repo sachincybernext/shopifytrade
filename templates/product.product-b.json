@@ -27,45 +27,16 @@
           "settings": {
           }
         },
+        "quantity_selector_y8zdLW": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
         "variant_picker_jXYztW": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
             "swatch_shape": "square"
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Product features",
-            "icon": "star",
-            "content": "",
-            "page": "product-features"
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials and care",
-            "icon": "leaf",
-            "content": "",
-            "page": "materials-and-care"
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Merchandising tips",
-            "icon": "check_mark",
-            "content": "",
-            "page": "merchandising-tips"
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         }
       },
@@ -73,11 +44,8 @@
         "title",
         "price",
         "description",
-        "variant_picker_jXYztW",
-        "collapsible-row-1",
-        "collapsible-row-0",
-        "collapsible-row-2",
-        "share"
+        "quantity_selector_y8zdLW",
+        "variant_picker_jXYztW"
       ],
       "settings": {
         "enable_sticky_info": true,
