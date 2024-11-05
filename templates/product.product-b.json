@@ -17,6 +17,14 @@
           "settings": {
           }
         },
+        "inventory_kHbrBF": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -38,14 +46,22 @@
             "picker_type": "button",
             "swatch_shape": "square"
           }
+        },
+        "custom_liquid_jDbcJk": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
         "title",
+        "inventory_kHbrBF",
         "price",
         "description",
         "quantity_selector_y8zdLW",
-        "variant_picker_jXYztW"
+        "variant_picker_jXYztW",
+        "custom_liquid_jDbcJk"
       ],
       "settings": {
         "enable_sticky_info": true,
