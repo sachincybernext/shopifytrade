@@ -1,1 +1,33 @@
-{%- render 'product-type' -%}
+{{ section.settings.product-type }}
+
+{% schema %}
+
+{
+
+   "name": "Custom Liquid",
+
+   "settings": [
+
+   {
+
+      "type": "snippet",
+
+      "id": "product-type",
+
+      "label": "Product Type",
+
+      "info": "Show Product type on your product page."
+
+   }],
+
+   "presets": [
+
+   {
+
+      "name": "Product Type"
+
+   }]
+
+}
+
+{% endschema %
