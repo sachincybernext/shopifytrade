@@ -1,14 +1,1 @@
-<<<<<<< HEAD
-{% if product.type %}
-    <p>Found in: {{ product.type }}</p>
-  {% else %}
-    <p>Product type not specified.</p>
-  {% endif %}
-=======
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
->>>>>>> af5dc7db22d26def8923f685fc9666f95d63d809
+{%- render 'product-type' -%}
