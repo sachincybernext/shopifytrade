@@ -1,33 +1,24 @@
-{{ section.settings.product-type }}
+{% comment %}
+This section displays the product type of the current product on the product page.
+{% endcomment %}
 
-{% schema %}
+{% if template contains 'product' %}
+  {% if product.type %}
+    <div class="product-type-section">
+      <h3>Product Type:</h3>
+      <p>{{ product.type }}</p>
+    </div>
+  {% else %}
+    <p>Product type not specified.</p>
+  {% endif %}
+{% else %}
+  <p>This section is only available on product pages.</p>
+{% endif %}
 
-{
-
-   "name": "Custom Liquid",
-
-   "settings": [
-
-   {
-
-      "type": "snippet",
-
-      "id": "product-type",
-
-      "label": "Product Type",
-
-      "info": "Show Product type on your product page."
-
-   }],
-
-   "presets": [
-
-   {
-
-      "name": "Product Type"
-
-   }]
-
-}
-
-{% endschema %
+<style>
+  .product-type-section {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+</style>
