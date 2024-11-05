@@ -25,6 +25,12 @@
             "show_inventory_quantity": true
           }
         },
+        "custom_liquid_ie6Nxy": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "As in {{ product.type }}"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -57,6 +63,7 @@
       "block_order": [
         "title",
         "inventory_kHbrBF",
+        "custom_liquid_ie6Nxy",
         "price",
         "description",
         "quantity_selector_y8zdLW",
