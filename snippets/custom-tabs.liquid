@@ -1,0 +1,118 @@
+{% schema %}
+{
+  "name": "My Custom Tabs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tab1_title",
+      "label": "Tab 1 Title",
+      "default": "Tab 1"
+    },
+    {
+      "type": "textarea",
+      "id": "tab1_content",
+      "label": "Tab 1 Content",
+      "default": "Content for Tab 1."
+    },
+    {
+      "type": "text",
+      "id": "tab2_title",
+      "label": "Tab 2 Title",
+      "default": "Tab 2"
+    },
+    {
+      "type": "textarea",
+      "id": "tab2_content",
+      "label": "Tab 2 Content",
+      "default": "Content for Tab 2."
+    },
+    {
+      "type": "text",
+      "id": "tab3_title",
+      "label": "Tab 3 Title",
+      "default": "Tab 3"
+    },
+    {
+      "type": "textarea",
+      "id": "tab3_content",
+      "label": "Tab 3 Content",
+      "default": "Content for Tab 3."
+    }
+  ],
+  "presets": [
+    {
+      "name": "My Custom Tabs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="custom-tabs">
+  <div class="tabs">
+    <button class="tab-link" data-tab="tab1">{{ section.settings.tab1_title }}</button>
+    <button class="tab-link" data-tab="tab2">{{ section.settings.tab2_title }}</button>
+    <button class="tab-link" data-tab="tab3">{{ section.settings.tab3_title }}</button>
+  </div>
+  <div class="tab-content">
+    <div id="tab1" class="tab-panel">{{ section.settings.tab1_content }}</div>
+    <div id="tab2" class="tab-panel">{{ section.settings.tab2_content }}</div>
+    <div id="tab3" class="tab-panel">{{ section.settings.tab3_content }}</div>
+  </div>
+</div>
+
+<style>
+.custom-tabs {
+  margin: 20px 0;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+.tab-link {
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.tab-link.active {
+  background-color: #000;
+  color: #fff;
+}
+.tab-content .tab-panel {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+.tab-content .tab-panel.active {
+  display: block;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.tab-link');
+  const panels = document.querySelectorAll('.tab-panel');
+  
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+      
+      // Remove active class from all tabs and panels
+      tabs.forEach((t) => t.classList.remove('active'));
+      panels.forEach((p) => p.classList.remove('active'));
+      
+      // Add active class to the clicked tab and its panel
+      tab.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+
+  // Activate the first tab by default
+  if (tabs.length > 0) {
+    tabs[0].click();
+  }
+});
+</script>
